@@ -4,9 +4,11 @@ import React from "react";
 const Mensaje = ({ children }) => {
   return (
     <>
-      <section className="container">
-        <div>{children}</div>
-      </section>
+      <main>
+        <section className="container">
+          <div>{children}</div>
+        </section>
+      </main>
     </>
   );
 };

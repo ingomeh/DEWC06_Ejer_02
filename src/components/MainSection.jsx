@@ -20,9 +20,7 @@ const MainSection = () => {
 
   // Funcion que maneja la acción de despedir a una persona
   const handleDeletePerson = (id) => {
-    let personasActualizado = listadoPersonas.filter(
-      (persona) => persona.id != id
-    );
+    let personasActualizado = listadoPersonas.filter((persona) => persona.id != id);
     setListadoPersonas(personasActualizado);
   };
 
@@ -38,19 +36,21 @@ const MainSection = () => {
 
   // Se devuelve el contenido principal del componente MainSection
   return (
-    <section className="container">
-      <h3>Tenemos una plantilla de {listadoPersonas.length} trabajadores</h3>
-      {listadoPersonas.map((persona) => (
-        <Person
-          key={persona.id}
-          id={persona.id}
-          name={persona.name}
-          email={persona.email}
-          phone={persona.phone}
-          onDeletePerson={handleDeletePerson}
-        />
-      ))}
-    </section>
+    <main>
+      <section className="container">
+        <h3>Tenemos una plantilla de {listadoPersonas.length} trabajadores</h3>
+        {listadoPersonas.map((persona) => (
+          <Person
+            key={persona.id}
+            id={persona.id}
+            name={persona.name}
+            email={persona.email}
+            phone={persona.phone}
+            onDeletePerson={handleDeletePerson}
+          />
+        ))}
+      </section>
+    </main>
   );
 };
 
