@@ -39,13 +39,13 @@ const MainSection = () => {
     <main>
       <section className="container">
         <h3>Tenemos una plantilla de {listadoPersonas.length} trabajadores</h3>
-        {listadoPersonas.map((persona) => (
+        {listadoPersonas.map(({id,name,email,phone}) => (
           <Person
-            key={persona.id}
-            id={persona.id}
-            name={persona.name}
-            email={persona.email}
-            phone={persona.phone}
+            key={id}
+            id={id}
+            name={name}
+            email={email}
+            phone={phone}
             onDeletePerson={handleDeletePerson}
           />
         ))}

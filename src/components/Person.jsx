@@ -18,9 +18,9 @@ const Person = ({ id, name, email, phone, onDeletePerson }) => {
         <button
           type="button"
           className="delete-btn"
-          onClick={() => onDeletePerson(id)}
+          onClick={(e) => onDeletePerson(id)}
         >
-          <img src="./src/trash.png" />
+          <img src="./src/assets/trash.png" />
         </button>
       </article>
     </>
